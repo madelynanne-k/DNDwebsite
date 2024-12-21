@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+
+.App {
+  text-align: center;
+}
+
+.homepage {
+  background-color: black;
+  background-image: url('./imgs/background.jpg');
+  color: whitesmoke;
+  font-family: 'Lavishly Yours', cursive;
+  font-size: 70px;
+  padding: 50px;
+}
+
+.homepage .img {
+  max-width: 400px;
+}
+
+.homepage .formControl {
+  display: flex;
+  justify-content: center; /* Horizontally center the field */
+  height: 100vh; /* Make the container full height of the viewport */
+  padding: 30px
+}
