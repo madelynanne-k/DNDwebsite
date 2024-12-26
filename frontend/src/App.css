@@ -70,3 +70,20 @@
   color: whitesmoke;
   font-size: 25px;
 }
+
+/*Spells Nav*/
+
+.spellsNav {
+  color: whitesmoke;
+  background-color: black;
+  font-family: 'Quintessential', serif;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px
+}
+
+.spellsNav .btn {
+  color: whitesmoke;
+  font-size: 10x;
+}

@@ -7,7 +7,7 @@ import Logo from '../imgs/navBarLogo.png';
 const Header = () => {
   return (
     <div className='header'>
-        <Navbar className='sticky-top navbar' dark sticky='top'expand='md'>
+        <Navbar className='navbar sticky-top ' dark sticky='top'expand='md'>
             <NavbarBrand className='ms-5' href='/'>
                 <img src={Logo} alt='web logo' className='float-start' style={{height: '80px'}} />
             </NavbarBrand>
