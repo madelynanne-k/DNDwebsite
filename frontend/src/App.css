@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Quintessential&display=swap');
 
 .App {
   text-align: center;
@@ -22,4 +22,51 @@
   justify-content: center; /* Horizontally center the field */
   height: 100vh; /* Make the container full height of the viewport */
   padding: 30px
+}
+
+/*begin dashboard*/
+
+.dashboard {
+  font-family: 'Quintessential', serif;
+  background-color: cornsilk;
+  color: cornsilk;
+}
+
+.dashboard .titleBox {
+  background-color: #57757daa; /* Light blue background */
+  color: #333; /* Dark gray text color */
+  width: 100%; /* Set a fixed width */
+  margin: 20px auto; /* Center horizontally */
+  height: 150px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  vertical-align: middle;
+}
+
+.dashboard .avatar {
+  height: 50px;
+}
+
+.dashboard .subtitle {
+  font-family: 'Lavishly Yours', cursive;
+  font-size: 30px;
+  color: cornsilk;
+}
+
+.dashboard .skill {
+  font-weight: bold;
+  font-size: 20px;
+  color: cornsilk;
+}
+
+/*begin header*/
+.header {
+  background-color: black;
+  color: whitesmoke;
+  font-family: 'Lavishly Yours', cursive;
+  font-size: 25px;
+}
+
+.header .btn {
+  color: whitesmoke;
+  font-size: 25px;
 }
