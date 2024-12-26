@@ -24,32 +24,32 @@ const Header = () => {
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink className='nav-link' to='/'>
+                        <NavLink className='nav-link' to='/weapons'>
                             <button type='button' className='btn'>Weapons</button>
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink className='nav-link' to='/'>
+                        <NavLink className='nav-link' to='/spellsLanding'>
                             <button type='button' className='btn'>Spells</button>
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink className='nav-link' to='/'>
+                        <NavLink className='nav-link' to='/inventory'>
                             <button type='button' className='btn'>Inventory</button>
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink className='nav-link' to='/'>
+                        <NavLink className='nav-link' to='/actionsLanding'>
                             <button type='button' className='btn'>Actions</button>
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink className='nav-link' to='/'>
+                        <NavLink className='nav-link' to='/featsTraits'>
                             <button type='button' className='btn'>Features and Traits</button>
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink className='nav-link' to='/'>
+                        <NavLink className='nav-link' to='/backgroundLanding'>
                             <button type='button' className='btn'>Background</button>
                         </NavLink>
                     </NavItem>
