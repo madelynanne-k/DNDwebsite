@@ -1,5 +1,4 @@
-import React from 'react';
-import { Navbar, Container, NavItem, Nav, NavbarBrand } from 'reactstrap';
+import { Navbar, Container, NavItem, Nav } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 

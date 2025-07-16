@@ -1,7 +1,7 @@
 import './App.css';
 import Homepage from './Pages/Homepage';
 import CharacterDashboard from './Pages/CharacterDashboard';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import {Route, Routes } from 'react-router-dom';
 import Weapons from './Pages/Weapons';
 import SpellsLandingPage from './Pages/SpellsLandingPage';
 import Inventory from './Pages/Inventory';

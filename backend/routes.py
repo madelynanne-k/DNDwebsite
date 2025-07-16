@@ -140,3 +140,19 @@ def get_proficiencies_and_training(char_id):
         return jsonify(training)
     else:
         return jsonify({'error': 'proficiencies and training not found'}), 404
+    
+#route to get spells from character id and spell level
+@routes.route('/characters/<int:char_id>/spells/<int:spell_level>', methods=['GET'])
+def get_spells(char_id, spell_level):
+    conn = get_db_connection()
+    cursor = conn.cursor(dictionary = True)
+
+    cursor.execute("SELECT * FROM spells WHERE character_id =%s AND spell_level =%s", (char_id, spell_level))
+    spells = cursor.fetchall()
+    cursor.close()
+    conn.close()
+
+    if spells:
+        return jsonify(spells)
+    else:
+        return jsonify({'error': 'spells not found'}), 404

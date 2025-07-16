@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 import Logo from '../imgs/navBarLogo.png';
 import { useUser } from './UserContext';
 
-
 const Header = () => {
 
     const { user } = useUser();

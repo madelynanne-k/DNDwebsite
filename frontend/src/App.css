@@ -148,3 +148,25 @@
   color: cornsilk;
   padding-bottom: 50px;
 }
+
+.spellsLanding .spellsMain {
+  display: flex;
+  flex-direction: row;
+}
+
+.spellsLanding .spellsContent {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.spellsLanding .cardHeader {
+  background-color: #6fa78bb6;
+  color:rgb(20, 22, 21);
+  font-size: 20px;
+}
+
+.spellsLanding .cardBody {
+  background-color: #476e5b;
+  color:rgb(218, 238, 228);
+  font-size: 25px;
+}
