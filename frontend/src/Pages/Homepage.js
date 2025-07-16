@@ -1,58 +1,77 @@
-import React from 'react'
-import { Row, Col, Button, FormGroup, Label } from 'reactstrap';
-import elarinPhoto from '../imgs/elarin/elarin.png';
-import blizzardPhoto from '../imgs/blizzard/blizz.png';
-import { Formik, Field, Form } from 'formik';
-import { Link } from 'react-router-dom';
+import { Row, Col, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { useNavigate } from 'react-router-dom';
-
+import { useEffect, useState } from 'react';
+import defaultProfile from '../imgs/navBarLogo.png';
+import { useUser } from '../Components/UserContext';
 const Homepage = () => {
 
     const navigate = useNavigate();
+
+    const [ characters, setCharacters ] = useState([]);
+    const [dropdownopen, setDropdownOpen] = useState(false);
+    const [ selectedName, setSelectedName ] = useState('Select a Character');
+
+    const toggle = () => setDropdownOpen((prevState) => !prevState);
+
+    useEffect(() => {
+        fetch("http://localhost:5000/characters")
+            .then((res) => res.json())
+            .then((data) => setCharacters(data))
+            .catch((err) => console.error("Error loading characters: ", err));
+    }, []);
+
+    const { setUser } = useUser();
+
+    const handleSelect = (char) => {
+        setSelectedName(char.name);
+        setUser(char.id);
+        navigate(`/dashboard/${char.id}`)
+    };
+
+
 
     return (
         <div className="homepage">
             <Row>
                 <Col>Select Your Character</Col>
             </Row>
+            {/*character selection photos*/}
             <Row className='my-5 py-3'>
-                <Col md className="m-6"><Link to='/dashboard'><img src={elarinPhoto} alt='elarin photo' className='img shadow' /></Link></Col>
-                <Col md className="m-6"><Link to="/dashboard"><img src={blizzardPhoto} alt="blizzard photo" className='img shadow' /></Link></Col>
+                {characters.slice(0, 2).map((char) => (
+                    <Col key={char.id} md className="m-6">
+                        <img 
+                            src={`/imgs/${char.profile_photo}`} 
+                            alt={char.name} 
+                            className='img shadow' 
+                            onClick={() => {
+                                setUser(char.id);
+                                navigate(`/dashboard/${char.id}`);
+                            }}
+                            onError={(e) => {
+                                e.target.onError = null;
+                                e.target.src = defaultProfile;
+                            }}
+                        />
+                    </Col>
+                ))}
             </Row>
             <Row>
-                <Col>Or Enter Their Name</Col>
+                <Col>Or Select From Dropdown</Col>
             </Row>
+            {/* character selection dropdown */}
             <Row>
                 <Col>
-                    <Formik>
-                        <Form className='formControl'>
-                            <Row>
-                                <Col>
-                                    <FormGroup>
-                                        <Field
-                                            name='name'
-                                            placeholder='Character Name'
-                                            className='form-control'
-                                            style={{ width: '300px' }}
-                                        />
-                                    </FormGroup>
-                                </Col>
-                            </Row>
-                            <Row className='mt-5'>
-                                <Col>
-                                    <Button
-                                        className='btn shadow rounded'
-                                        style={{ marginLeft: '-300px', width: '250px', fontSize: '25px' }}
-                                        onClick={() => navigate('/dashboard')}
-                                    >
-                                        Submit
-                                    </Button>
-                                </Col>
-                            </Row>
-                        </Form>
-                    </Formik>
+                    <Dropdown isOpen={dropdownopen} toggle={toggle} className="character-dropdown" style={{ fontWeight: 'bold', fontSize: '30px'}}>
+                        <DropdownToggle caret color="secondary" className="shadow px-4 py-2 fs-5">{selectedName}</DropdownToggle>
+                        <DropdownMenu style={{ minWidth: '250px'}}>
+                            {characters.map((char) => (
+                                <DropdownItem key={char.id} onClick={() => handleSelect(char)} style={{ padding: '10px 15px', fontWeight: 'bold', fontSize: '20px'}}>{char.name}</DropdownItem>
+                            ))}
+                        </DropdownMenu>
+                    </Dropdown>
                 </Col>
             </Row>
+
         </div>
     )
 }

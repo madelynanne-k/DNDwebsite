@@ -2,9 +2,13 @@ import { Navbar, Container, NavItem, Nav, NavbarBrand } from 'reactstrap';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from '../imgs/navBarLogo.png';
+import { useUser } from './UserContext';
 
 
 const Header = () => {
+
+    const { user } = useUser();
+
   return (
     <div className='header'>
         <Navbar className='navbar sticky-top ' dark sticky='top'expand='md'>
@@ -19,7 +23,7 @@ const Header = () => {
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink className='nav-link' to='/dashboard'>
+                        <NavLink className='nav-link' to={`/dashboard/${user}`}>
                             <button className='btn' type='button'>Dashboard</button>
                         </NavLink>
                     </NavItem>

@@ -5,31 +5,40 @@
 }
 
 .homepage {
-  background-color: black;
-  background-image: url('./imgs/background.jpg');
+  background-image: linear-gradient(to bottom right, rgb(71, 212, 14), rgb(6, 8, 8),rgb(14, 122, 194)), url('./imgs/paper-fibers.png');
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
   color: whitesmoke;
   font-family: 'Lavishly Yours', cursive;
   font-size: 70px;
   padding: 50px;
+  padding-bottom: 50px;
+  min-height: 100vh;
 }
 
 .homepage .img {
   max-width: 400px;
 }
 
-.homepage .formControl {
-  display: flex;
-  justify-content: center; /* Horizontally center the field */
-  height: 100vh; /* Make the container full height of the viewport */
-  padding: 30px
+.homepage .character-dropdown {
+  margin: 0 auto;
+  width: fit-content;
+  text-align: center;
 }
 
 /*begin dashboard*/
 
 .dashboard {
   font-family: 'Quintessential', serif;
-  background-color: cornsilk;
+  background-image: url(./imgs/paper-fibers.png);
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
   color: cornsilk;
+  padding-bottom: 50px;
 }
 
 .dashboard .titleBox {
@@ -38,6 +47,7 @@
   width: 100%; /* Set a fixed width */
   margin: 20px auto; /* Center horizontally */
   height: 150px;
+  font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   vertical-align: middle;
 }
@@ -58,6 +68,15 @@
   color: cornsilk;
 }
 
+.dashboard .numbers {
+  font-size: 20px;
+}
+
+.dashboard .badges {
+  margin-top: -15px;
+  font-size: 30px;
+}
+
 /*begin header*/
 .header {
   background-color: black;
@@ -71,6 +90,27 @@
   font-size: 25px;
 }
 
+.header .btn {
+  color: whitesmoke;
+  font-size: 25px;
+  background: transparent;
+  border: none;
+}
+
+/* Hover effect */
+.header .btn:hover {
+  color: #17a2b8; 
+  text-shadow: 0 0 5px #17a2b8; 
+  cursor: pointer;
+}
+
+.header .btn-outline-info:hover {
+  color: black;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+
 /*Spells Nav*/
 
 .spellsNav {
@@ -80,10 +120,31 @@
   width: 200px;
   display: flex;
   flex-direction: column;
-  padding: 20px
+  padding: 20px;
+  height: 100%;
 }
 
 .spellsNav .btn {
   color: whitesmoke;
   font-size: 10x;
+}
+
+/* Hover effect */
+.spellsNav .btn:hover {
+  color: #08e94b; 
+  text-shadow: 0 0 5px #08e94b; 
+  cursor: pointer;
+}
+
+
+/*Spells Landing and Cantrips*/
+.spellsLanding {
+  font-family: 'Quintessential', serif;
+  background-image: url(./imgs/paper-fibers.png);
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  color: cornsilk;
+  padding-bottom: 50px;
 }
