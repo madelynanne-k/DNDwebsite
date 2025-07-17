@@ -83,6 +83,9 @@
   color: whitesmoke;
   font-family: 'Lavishly Yours', cursive;
   font-size: 25px;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
 }
 
 .header .btn {
@@ -121,7 +124,12 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
-  height: 100%;
+  padding-top: 80px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .spellsNav .btn {
@@ -147,11 +155,15 @@
   background-blend-mode: multiply;
   color: cornsilk;
   padding-bottom: 50px;
+  min-height: 100vh;
+  position: relative;
 }
 
 .spellsLanding .spellsMain {
   display: flex;
   flex-direction: row;
+  margin-left: 200px;;
+  padding-left: 20px;
 }
 
 .spellsLanding .spellsContent {
@@ -169,4 +181,8 @@
   background-color: #476e5b;
   color:rgb(218, 238, 228);
   font-size: 25px;
+}
+
+.spellsLanding .card {
+  margin-bottom: 20px;
 }

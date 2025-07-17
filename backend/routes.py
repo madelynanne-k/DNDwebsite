@@ -156,3 +156,20 @@ def get_spells(char_id, spell_level):
         return jsonify(spells)
     else:
         return jsonify({'error': 'spells not found'}), 404
+    
+    
+#route to get spells from character id 
+@routes.route('/characters/<int:char_id>/spells', methods=['GET'])
+def get_all_spells(char_id):
+    conn = get_db_connection()
+    cursor = conn.cursor(dictionary = True)
+
+    cursor.execute("SELECT * FROM spells WHERE character_id =%s", (char_id,))
+    spells = cursor.fetchall()
+    cursor.close()
+    conn.close()
+
+    if spells:
+        return jsonify(spells)
+    else:
+        return jsonify({'error': 'spells not found'}), 404

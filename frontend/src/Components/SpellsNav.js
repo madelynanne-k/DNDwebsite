@@ -58,6 +58,11 @@ const SpellsNav = () => {
                             <button className='btn' type='button'>Level 9 Spells</button>
                         </NavLink>
                     </NavItem>
+                    <NavItem>
+                        <NavLink className='nav-link' to='/allSpells'>
+                            <button className='btn' type='button'>All Spells</button>
+                        </NavLink>
+                    </NavItem>
                 </Nav>
             </Container>
                 

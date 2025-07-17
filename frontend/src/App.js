@@ -9,6 +9,7 @@ import ActionsLandingPage from './Pages/ActionsLandingPage';
 import FeaturesAndTraits from './Pages/FeaturesAndTraits';
 import BackgroundLandingPage from './Pages/BackgroundLandingPage';
 import Level1 from './Pages/Spells/Level1';
+import AllSpells from './Pages/Spells/AllSpells';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/weapons' element={<Weapons />} />
         <Route path='/spellsLanding' element={<SpellsLandingPage />} />
         <Route path='/spellsLevel1' element={<Level1 />}/>
+        <Route path='/allSpells' element={<AllSpells />}/>
         <Route path='/inventory' element={<Inventory />} />
         <Route path='/actionsLanding' element={<ActionsLandingPage />} />
         <Route path="/featsTraits" element={<FeaturesAndTraits />} />
