@@ -122,49 +122,49 @@ const CharacterDashboard = () => {
       <Row className='my-5'>
 
         {/*Ability Points*/}
-        <Col md='4' style={{ paddingLeft: '110px', paddingRight: '100px' }}>
-          <Card className='shadow border-info' style={{ height: '225px', backgroundColor: '#4e696b', color: 'cornsilk' }}>
+        <Col xs='12' md='4' className='px-4 mb-4 d-flex'>
+          <Card className='shadow border-info w-100 h-100 d-flex flex-column' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
             <CardTitle className='subtitle border-bottom border-white  border-opacity-75'>Ability Points</CardTitle>
             <CardBody style={{ marginTop: '-5px' }}>
-              <Row>
-                <Col className='fw-bold text-middle ps-3'>Strength</Col>
-                <Col style={{ wordSpacing: '15px' }}>Mod +{abilityMods.strength}</Col>
-                <Col style={{ wordSpacing: '15px' }}>Total {abilityScores.strength}</Col>
+              <Row className='mb-2'>
+                <Col xs='12' sm='4' className='fw-bold text-middle ps-3'>Strength</Col>
+                <Col xs='6' sm='4' className='text-center'>Mod +{abilityMods.strength}</Col>
+                <Col xs='6' sm='4' className='text-center'>Total {abilityScores.strength}</Col>
               </Row>
-              <Row>
-                <Col className='fw-bold text-middle ps-3'>Dexterity</Col>
-                <Col style={{ wordSpacing: '15px' }}>Mod +{abilityMods.dexterity}</Col>
-                <Col style={{ wordSpacing: '15px' }}>Total {abilityScores.dexterity}</Col>
+              <Row className='mb-2'>
+                <Col xs='12' sm='4' className='fw-bold text-middle ps-3'>Dexterity</Col>
+                <Col xs='6' sm='4' className='text-center'>Mod +{abilityMods.dexterity}</Col>
+                <Col xs='6' sm='4' className='text-center'>Total {abilityScores.dexterity}</Col>
               </Row>
-              <Row>
-                <Col className='fw-bold text-middle ps-3'>Constitution</Col>
-                <Col style={{ wordSpacing: '15px' }}>Mod +{abilityMods.constitution}</Col>
-                <Col style={{ wordSpacing: '15px' }}>Total {abilityScores.constitution}</Col>
+              <Row className='mb-2'>
+                <Col xs='12' sm='4' className='fw-bold text-middle ps-3'>Constitution</Col>
+                <Col xs='6' sm='4' className='text-center'>Mod +{abilityMods.constitution}</Col>
+                <Col xs='6' sm='4' className='text-center'>Total {abilityScores.constitution}</Col>
               </Row>
-              <Row>
-                <Col className='fw-bold text-middle ps-3'>Intelligence</Col>
-                <Col style={{ wordSpacing: '15px' }}>Mod +{abilityMods.intelligence}</Col>
-                <Col style={{ wordSpacing: '15px' }}>Total {abilityScores.intelligence}</Col>
+              <Row className='mb-2'>
+                <Col xs='12' sm='4' className='fw-bold text-middle ps-3'>Intelligence</Col>
+                <Col xs='6' sm='4' className='text-center'>Mod +{abilityMods.intelligence}</Col>
+                <Col xs='6' sm='4' className='text-center'>Total {abilityScores.intelligence}</Col>
               </Row>
-              <Row>
-                <Col className='fw-bold text-middle ps-3'>Wisdom</Col>
-                <Col style={{ wordSpacing: '15px' }}>Mod +{abilityMods.wisdom}</Col>
-                <Col style={{ wordSpacing: '15px' }}>Total {abilityScores.wisdom}</Col>
+              <Row className='mb-2'>
+                <Col xs='12' sm='4' className='fw-bold text-middle ps-3'>Wisdom</Col>
+                <Col xs='6' sm='4' className='text-center'>Mod +{abilityMods.wisdom}</Col>
+                <Col xs='6' sm='4' className='text-center'>Total {abilityScores.wisdom}</Col>
               </Row>
-              <Row>
-                <Col className='fw-bold text-middle ps-3'>Charisma</Col>
-                <Col style={{ wordSpacing: '15px' }}>Mod +{abilityMods.charisma}</Col>
-                <Col style={{ wordSpacing: '15px' }}>Total {abilityScores.charisma}</Col>
+              <Row className='mb-2'>
+                <Col xs='12' sm='4' className='fw-bold text-middle ps-3'>Charisma</Col>
+                <Col xs='6' sm='4' className='text-center'>Mod +{abilityMods.charisma}</Col>
+                <Col xs='6' sm='4' className='text-center'>Total {abilityScores.charisma}</Col>
               </Row>
             </CardBody>
           </Card>
         </Col>
 
         {/*Saving Throws*/}
-        <Col md='4' style={{ paddingLeft: '100px', paddingRight: '100px' }}>
-          <Card className='shadow border-info' style={{ height: '225px', backgroundColor: '#4e696b', color: 'cornsilk' }}>
+        <Col xs='12' md='4' className='px-4 mb-4 d-flex'>
+          <Card className='shadow border-info w-100 h-100 d-flex flex-column' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
             <CardTitle className='subtitle border-bottom border-white  border-opacity-75'>Saving Throws</CardTitle>
-            <CardBody className='savingThrows'>
+            <CardBody className='savingThrows m-4'>
               <Row style={{ marginTop: '-23px' }}>
                 <Col className='fw-bold text-middle ps-3'>Strength</Col>
                 <Col className='numbers'>+ {savingThrows.strength}</Col>
@@ -194,10 +194,10 @@ const CharacterDashboard = () => {
         </Col>
 
         {/*Senses*/}
-        <Col md='4' style={{ paddingLeft: '100px', paddingRight: '100px' }}>
-          <Card className='shadow border-info' style={{ height: '225px', backgroundColor: '#4e696b', color: 'cornsilk' }}>
+        <Col xs='12' md='4' className='px-4 mb-4 d-flex'>
+          <Card className='shadow border-info w-100 h-100 d-flex flex-column' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
             <CardTitle className='subtitle border-bottom border-white  border-opacity-75'>Senses</CardTitle>
-            <CardBody className='pt-4'>
+            <CardBody className='pt-4 m-4 ps-5'>
               <Row>
                 <Col className='fw-bold text-middle ps-3'>Passive Perception</Col>
                 <Col className='numbers'>{senses.perception}</Col>
@@ -226,7 +226,7 @@ const CharacterDashboard = () => {
             <CardBody>
               <Row className='border-bottom border-light border-opacity-50 pb-3'>
                 <Col className='skill text-end ps-5'>Acrobatics</Col>
-                <Col className='text-start numbers'>+ {skills.acrobatics}</Col>
+                <Col className='text-start numbers'>{skills.acrobatics}</Col>
                 <Col className='skill text-end text-nowrap'>Animal Handling</Col>
                 <Col className='text-start numbers'>+ {skills.animal_handling}</Col>
                 <Col className='skill text-end'>Arcana</Col>

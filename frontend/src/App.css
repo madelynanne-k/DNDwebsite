@@ -46,7 +46,9 @@
   color: #333; /* Dark gray text color */
   width: 100%; /* Set a fixed width */
   margin: 20px auto; /* Center horizontally */
-  height: 150px;
+  min-height: 150px;
+  height: auto;
+  padding: 1rem;
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   vertical-align: middle;
