@@ -64,7 +64,7 @@ const CharacterDashboard = () => {
       .catch((err) => console.error("Error fetching skills: ", err))
   }, [id]);
 
-   /*fetching badges*/
+  /*fetching badges*/
   useEffect(() => {
     fetch(`http://localhost:5000/characters/${id}/badges`)
       .then((res) => res.json())
@@ -72,7 +72,7 @@ const CharacterDashboard = () => {
       .catch((err) => console.error("Error fetching badges: ", err))
   }, [id]);
 
-     /*fetching proficiencies and trainings*/
+  /*fetching proficiencies and trainings*/
   useEffect(() => {
     fetch(`http://localhost:5000/characters/${id}/proficiencies-and-training`)
       .then((res) => res.json())
@@ -91,10 +91,10 @@ const CharacterDashboard = () => {
       <Row className="titleBox align-items-center">
         {/*profile photo*/}
         <Col md='2' className='text-end'>
-          <img 
-            src={`/imgs/${character.profile_photo}`} 
-            alt={character.name} 
-            style={{ width: '125px', height: '125px', borderRadius: '50%', objectFit: 'cover' }} 
+          <img
+            src={`/imgs/${character.profile_photo}`}
+            alt={character.name}
+            style={{ width: '125px', height: '125px', borderRadius: '50%', objectFit: 'cover' }}
             onError={(e) => {
               e.target.onError = null;
               e.target.src = Avatar;
@@ -222,50 +222,28 @@ const CharacterDashboard = () => {
         {/*Skills*/}
         <Col style={{ marginLeft: '40px', marginRight: '30px' }}>
           <Card className='shadow border-info' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
-            <CardTitle className='subtitle border-bottom border-white  border-opacity-75'>Skills</CardTitle>
-            <CardBody>
-              <Row className='border-bottom border-light border-opacity-50 pb-3'>
-                <Col className='skill text-end ps-5'>Acrobatics</Col>
-                <Col className='text-start numbers'>{skills.acrobatics}</Col>
-                <Col className='skill text-end text-nowrap'>Animal Handling</Col>
-                <Col className='text-start numbers'>+ {skills.animal_handling}</Col>
-                <Col className='skill text-end'>Arcana</Col>
-                <Col className='text-start numbers'>+ {skills.arcana}</Col>
-                <Col className='skill text-end'>Athletics</Col>
-                <Col className='text-start numbers'>+ {skills.athletics}</Col>
-                <Col className='skill text-end'>Deception</Col>
-                <Col className='text-start numbers'>+ {skills.deception}</Col>
-                <Col className='skill text-end'>History</Col>
-                <Col className='text-start numbers'>+ {skills.history}</Col>
-                <Col className='skill text-end'>Insight</Col>
-                <Col className='text-start numbers'>+ {skills.insight}</Col>
-              </Row>
-              <Row className='mt-3 border-bottom border-light border-opacity-50 pb-3'>
-                <Col className='skill text-end ps-5'>Intimidation</Col>
-                <Col className='text-start numbers'>+ {skills.intimidation}</Col>
-                <Col className='skill text-end'>Investigation</Col>
-                <Col className='text-start numbers'>+ {skills.investigation}</Col>
-                <Col className='skill text-end'>Medicine</Col>
-                <Col className='text-start numbers'>+ {skills.medicine}</Col>
-                <Col className='skill text-end'>Nature</Col>
-                <Col className='text-start numbers'>+ {skills.nature}</Col>
-                <Col className='skill text-end'>Perception</Col>
-                <Col className='text-start numbers'>+ {skills.perception}</Col>
-                <Col className='skill text-end'>Performance</Col>
-                <Col className='text-start numbers'>+ {skills.performance}</Col>
-                <Col className='skill text-end'>Persuasion</Col>
-                <Col className='text-start numbers'>+ {skills.persuasion}</Col>
-              </Row>
-              <Row className='mt-3 pb-1'>
-                <Col className='skill text-end ps-5'>Religion</Col>
-                <Col className='text-start numbers'>+ {skills.religion}</Col>
-                <Col className='skill text-end'>Sleight of Hand</Col>
-                <Col className='text-start numbers'>+ {skills.sleight_of_hand}</Col>
-                <Col className='skill text-end'>Stealth</Col>
-                <Col className='text-start numbers'>+ {skills.stealth}</Col>
-                <Col className='skill text-end'>Survival</Col>
-                <Col className='text-start numbers'>+ {skills.survival}</Col>
-              </Row>
+            <CardTitle className='subtitle border-bottom border-white border-opacity-75'>Skills</CardTitle>
+            <CardBody style={{marginTop: '-36px'}}>
+              <div className='skills-container'>
+                <div className='skill-pair'><span className='skill'>Acrobatics</span><span className='mod'>{skills.acrobatics}</span></div>
+                <div className='skill-pair'><span className='skill'>Animal Handling</span><span className='mod'>{skills.animal_handling}</span></div>
+                <div className='skill-pair'><span className='skill'>Arcana</span><span className='mod'>{skills.arcana}</span></div>
+                <div className='skill-pair'><span className='skill'>Athletics</span><span className='mod'>{skills.athletics}</span></div>
+                <div className='skill-pair'><span className='skill'>Deception</span><span className='mod'>{skills.deception}</span></div>
+                <div className='skill-pair'><span className='skill'>History</span><span className='mod'>{skills.history}</span></div>
+                <div className='skill-pair'><span className='skill'>Insight</span><span className='mod'>{skills.insight}</span></div>
+                <div className='skill-pair'><span className='skill'>Intimidation</span><span className='mod'>{skills.intimidation}</span></div>
+                <div className='skill-pair'><span className='skill'>Investigation</span><span className='mod'>{skills.investigation}</span></div>
+                <div className='skill-pair'><span className='skill'>Medicine</span><span className='mod'>{skills.medicine}</span></div>
+                <div className='skill-pair'><span className='skill'>Nature</span><span className='mod'>{skills.nature}</span></div>
+                <div className='skill-pair'><span className='skill'>Perception</span><span className='mod'>{skills.perception}</span></div>
+                <div className='skill-pair'><span className='skill'>Performance</span><span className='mod'>{skills.performance}</span></div>
+                <div className='skill-pair'><span className='skill'>Persuasion</span><span className='mod'>{skills.persuasion}</span></div>
+                <div className='skill-pair'><span className='skill'>Religion</span><span className='mod'>{skills.religion}</span></div>
+                <div className='skill-pair'><span className='skill'>Sleight of Hand</span><span className='mod'>{skills.sleight_of_hand}</span></div>
+                <div className='skill-pair'><span className='skill'>Stealth</span><span className='mod'>{skills.stealth}</span></div>
+                <div className='skill-pair'><span className='skill'>Survival</span><span className='mod'>{skills.survival}</span></div>
+              </div>
             </CardBody>
           </Card>
         </Col>
@@ -309,7 +287,7 @@ const CharacterDashboard = () => {
             <Col md='4'>
               <Card className='shadow border-info' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
                 <CardTitle className='subtitle border-bottom border-white  border-opacity-75'>Defenses</CardTitle>
-                <CardBody style={{fontSize: '20px'}}>{badges.defenses}</CardBody>
+                <CardBody style={{ fontSize: '20px' }}>{badges.defenses}</CardBody>
               </Card>
             </Col>
           </Row>
