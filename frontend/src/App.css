@@ -154,8 +154,9 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
-  padding-top: 80px;
-  height: 100vh;
+  margin-top: 80px;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
   position: fixed;
   top: 0;
   left: 0;
@@ -174,8 +175,26 @@
   cursor: pointer;
 }
 
+/* Toggle button on small screens */
+.spellsNavToggle {
+  background-color: black;
+  border: none;
+  color: #08e94b;
+  font-weight: bold;
+}
 
-/*Spells Landing and Cantrips*/
+/* Mobile offcanvas behavior */
+@media (max-width: 768px) {
+  .spellsNav {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .spellsNav.open {
+    transform: translateX(0);
+  }
+}
+/*Spells Cantrips and 1-9*/
 .spellsLanding {
   font-family: 'Quintessential', serif;
   background-image: url(./imgs/paper-fibers.png);
@@ -215,4 +234,60 @@
 
 .spellsLanding .card {
   margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .spellsLanding .spellsMain {
+    flex-direction: column;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .spellsLanding .spellsContent {
+    padding: 10px;
+  }
+
+  .spellsLanding .cardHeader > .row,
+  .spellsLanding .cardHeader > .Row {
+    flex-direction: column;
+  }
+
+  .spellsLanding .cardHeader div {
+    width: 100% !important;
+    margin-bottom: 6px;
+
+  }
+}
+
+.spellsLanding .spell-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 4px;
+  column-gap: 16px;
+}
+
+.spellsLanding .spell-pair {
+  display: flex;
+  align-items: baseline;
+  font-size: clamp(14px, 1.2vw, 20px);
+  gap: 6px;
+  margin-bottom:  2px;
+}
+
+
+.spellsLanding .spell-field1 {
+  color: rgb(113, 121, 115);
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.spellsLanding .spell-value1 {
+  color: rgb(20, 22, 21);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.spellsLanding .spell-value1.bold {
+  font-weight: 1000;
 }

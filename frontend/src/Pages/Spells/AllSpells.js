@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { useUser } from '../../Components/UserContext';
 
 const AllSpells = () => {
-const [openIndices, setOpenIndices] = useState(new Set());
+  const [openIndices, setOpenIndices] = useState(new Set());
   const [spells, setSpells] = useState([]);
 
   const { user } = useUser();
@@ -47,21 +47,33 @@ const [openIndices, setOpenIndices] = useState(new Set());
             <Col>
               {Array.isArray(spells) && spells.map((spell, index) => (
                 <Card className='card border-success' key={index}>
-                  <CardHeader onClick={() => toggle(index)} style={{ cursor: 'pointer' }} className='cardHeader border-bottom border-black  border-opacity-75'>
-                    <Row>
-                      <div style={{ width: '6%', color: 'GrayText' }}>Name:</div>
-                      <div className='text-start' style={{ width: '15%', fontWeight: '1000' }}>{spell.spell_name}</div>
-                      <div style={{ width: '5%', color: 'GrayText' }}>Time:</div>
-                      <div className='text-start' style={{ width: '10%' }}>{spell.time}</div>
-                      <div style={{ width: '5%', color: 'GrayText' }}>Range:</div>
-                      <div className='text-start' style={{ width: '10%' }}>{spell.area}</div>
-                      <div style={{ width: '7%', color: 'GrayText' }}>Duration:</div>
-                      <div className='text-start' style={{ width: '12%' }}>{spell.duration}</div>
-                      <div style={{ width: '7%', color: 'GrayText' }}>HIT/DC:</div>
-                      <div className='text-start' style={{ width: '6%' }}>{spell.dc}</div>
-                      <div style={{ width: '6%', color: 'GrayText' }}>Effect:</div>
-                      <div className='text-start' style={{ width: '11%' }}>{spell.effect.includes('+') || spell.effect[1] === 'd' ? <strong>{spell.effect}</strong> : spell.effect}</div>
-                    </Row>
+                  <CardHeader onClick={() => toggle(index)} style={{ cursor: 'pointer' }} className='cardHeader border-bottom border-black  border-opacity-75 px-5'>
+                    <div className='spell-row'>
+                      <div className='spell-pair'>
+                        <span className='spell-field1'>Name:</span>
+                        <span className='spell-value1 bold'>{spell.spell_name}</span>
+                      </div>
+                      <div className='spell-pair'>
+                        <span className='spell-field1'>Time:</span>
+                        <span className='spell-value1'>{spell.time}</span>
+                      </div>
+                      <div className='spell-pair'>
+                        <span className='spell-field1'>Range:</span>
+                        <span className='spell-value1 '>{spell.area}</span>
+                      </div>
+                      <div className='spell-pair'>
+                        <span className='spell-field1'>Duration:</span>
+                        <span className='spell-value1 '>{spell.duration}</span>
+                      </div>
+                      <div className='spell-pair'>
+                        <span className='spell-field1'>HII/DC:</span>
+                        <span className='spell-value1 '>{spell.dc}</span>
+                      </div>
+                      <div className='spell-pair'>
+                        <span className='spell-field1'>Effect:</span>
+                        <span className='spell-value1 '>{spell.effect.includes('+') || spell.effect[1] === 'd' ? <strong>{spell.effect}</strong> : spell.effect}</span>
+                      </div>
+                    </div>
                   </CardHeader>
                   <Collapse isOpen={openIndices.has(index)}>
                     <CardBody className='cardBody text-start'>

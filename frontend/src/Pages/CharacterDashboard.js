@@ -89,6 +89,7 @@ const CharacterDashboard = () => {
     <div className='dashboard'>
       <Header />
       <Row className="titleBox align-items-center">
+
         {/*profile photo*/}
         <Col md='2' className='text-end'>
           <img
@@ -119,8 +120,7 @@ const CharacterDashboard = () => {
           </Row>
         </Col>
       </Row>
-      <Row className='my-5'>
-
+      <Row className='my-5 mx-5 px-4'>
         {/*Ability Points*/}
         <Col xs='12' md='4' className='px-4 mb-4 d-flex'>
           <Card className='shadow border-info w-100 h-100 d-flex flex-column' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
@@ -249,43 +249,43 @@ const CharacterDashboard = () => {
         </Col>
       </Row>
       <Row className='mt-5' style={{ marginLeft: '80px', marginRight: '80px' }}>
-        {/*small boxes*/}
-        <Col md='6' style={{ marginTop: '40px' }}>
+      {/*small boxes*/}
+        <Col md='6' className='mt-4 pt-2'>
           <Row>
-            <Col md='4'>
-              <Card className='shadow border-info' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
+            <Col md='4' className='d-flex'>
+              <Card className='shadow border-info w-100 h-40 d-flex flex-column' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
                 <CardTitle className='subtitle border-bottom border-white  border-opacity-75'>Initiative</CardTitle>
                 <CardBody className='badges'>+ {badges.initiative}</CardBody>
               </Card>
             </Col>
-            <Col md='4'>
-              <Card className='shadow border-info' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
+            <Col md='4' className='d-flex'>
+              <Card className='shadow border-info w-100 h-40 d-flex flex-column' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
                 <CardTitle className='subtitle border-bottom border-white  border-opacity-75'>Walking Speed</CardTitle>
                 <CardBody className='badges'>{badges.walking_speed}</CardBody>
               </Card>
             </Col>
-            <Col md='4'>
-              <Card className='shadow border-info' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
+            <Col md='4' className='d-flex'>
+              <Card className='shadow border-info w-100 h-40 d-flex flex-column' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
                 <CardTitle className='subtitle border-bottom border-white  border-opacity-75'>Hit Points</CardTitle>
                 <CardBody className='badges'>{badges.hit_points}</CardBody>
               </Card>
             </Col>
           </Row>
           <Row className='my-2'>
-            <Col md='4'>
-              <Card className='shadow border-info' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
+            <Col md='4' className='d-flex'>
+              <Card className='shadow border-info w-100 h-40 d-flex flex-column' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
                 <CardTitle className='subtitle border-bottom border-white  border-opacity-75'>Proficiency Bonus</CardTitle>
                 <CardBody className='badges'>{badges.proficiency_bonus}</CardBody>
               </Card>
             </Col>
-            <Col md='4'>
-              <Card className='shadow border-info' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
+            <Col md='4' className='d-flex'>
+              <Card className='shadow border-info w-100 h-40 d-flex flex-column' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
                 <CardTitle className='subtitle border-bottom border-white  border-opacity-75'>Armor Class</CardTitle>
                 <CardBody className='badges'>{badges.armor_class}</CardBody>
               </Card>
             </Col>
-            <Col md='4'>
-              <Card className='shadow border-info' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
+            <Col md='4' className='d-flex'>
+              <Card className='shadow border-info w-100 h-40 d-flex flex-column' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
                 <CardTitle className='subtitle border-bottom border-white  border-opacity-75'>Defenses</CardTitle>
                 <CardBody style={{ fontSize: '20px' }}>{badges.defenses}</CardBody>
               </Card>
