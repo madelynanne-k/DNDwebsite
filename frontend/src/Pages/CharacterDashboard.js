@@ -254,19 +254,19 @@ const CharacterDashboard = () => {
           <Row>
             <Col md='4' className='d-flex'>
               <Card className='shadow border-info w-100 h-40 d-flex flex-column' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
-                <CardTitle className='subtitle border-bottom border-white  border-opacity-75'>Initiative</CardTitle>
+                <CardTitle className='subtitleBadge border-bottom border-white  border-opacity-75'>Initiative</CardTitle>
                 <CardBody className='badges'>+ {badges.initiative}</CardBody>
               </Card>
             </Col>
             <Col md='4' className='d-flex'>
               <Card className='shadow border-info w-100 h-40 d-flex flex-column' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
-                <CardTitle className='subtitle border-bottom border-white  border-opacity-75'>Walking Speed</CardTitle>
+                <CardTitle className='subtitleBadge border-bottom border-white  border-opacity-75'>Walking Speed</CardTitle>
                 <CardBody className='badges'>{badges.walking_speed}</CardBody>
               </Card>
             </Col>
             <Col md='4' className='d-flex'>
               <Card className='shadow border-info w-100 h-40 d-flex flex-column' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
-                <CardTitle className='subtitle border-bottom border-white  border-opacity-75'>Hit Points</CardTitle>
+                <CardTitle className='subtitleBadge border-bottom border-white  border-opacity-75'>Hit Points</CardTitle>
                 <CardBody className='badges'>{badges.hit_points}</CardBody>
               </Card>
             </Col>
@@ -274,20 +274,20 @@ const CharacterDashboard = () => {
           <Row className='my-2'>
             <Col md='4' className='d-flex'>
               <Card className='shadow border-info w-100 h-40 d-flex flex-column' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
-                <CardTitle className='subtitle border-bottom border-white  border-opacity-75'>Proficiency Bonus</CardTitle>
+                <CardTitle className='subtitleBadge border-bottom border-white  border-opacity-75'>Proficiency Bonus</CardTitle>
                 <CardBody className='badges'>{badges.proficiency_bonus}</CardBody>
               </Card>
             </Col>
             <Col md='4' className='d-flex'>
               <Card className='shadow border-info w-100 h-40 d-flex flex-column' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
-                <CardTitle className='subtitle border-bottom border-white  border-opacity-75'>Armor Class</CardTitle>
+                <CardTitle className='subtitleBadge border-bottom border-white  border-opacity-75'>Armor Class</CardTitle>
                 <CardBody className='badges'>{badges.armor_class}</CardBody>
               </Card>
             </Col>
             <Col md='4' className='d-flex'>
               <Card className='shadow border-info w-100 h-40 d-flex flex-column' style={{ backgroundColor: '#4e696b', color: 'cornsilk' }}>
-                <CardTitle className='subtitle border-bottom border-white  border-opacity-75'>Defenses</CardTitle>
-                <CardBody style={{ fontSize: '20px' }}>{badges.defenses}</CardBody>
+                <CardTitle className='subtitleBadge border-bottom border-white  border-opacity-75'>Defenses</CardTitle>
+                <CardBody style={{ fontSize: 'clamp(14px, 1vw, 20px' }}>{badges.defenses}</CardBody>
               </Card>
             </Col>
           </Row>

@@ -36,7 +36,7 @@ const SpellsNav = () => {
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='nav-link' to='/'>
+                                <NavLink className='nav-link' to='/spellsLevel2'>
                                     <button className='btn' type='button'>Level 2 Spells</button>
                                 </NavLink>
                             </NavItem>
