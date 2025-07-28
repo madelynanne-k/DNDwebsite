@@ -31,47 +31,47 @@ const SpellsNav = () => {
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='nav-link' to='/spellsLevel1'>
+                                <NavLink className='nav-link' to='/spells/1'>
                                     <button className='btn' type='button'>Level 1 Spells</button>
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='nav-link' to='/spellsLevel2'>
+                                <NavLink className='nav-link' to='/spells/2'>
                                     <button className='btn' type='button'>Level 2 Spells</button>
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='nav-link' to='/'>
+                                <NavLink className='nav-link' to='/spells/3'>
                                     <button className='btn' type='button'>Level 3 Spells</button>
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='nav-link' to='/'>
+                                <NavLink className='nav-link' to='/spells/4'>
                                     <button className='btn' type='button'>Level 4 Spells</button>
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='nav-link' to='/'>
+                                <NavLink className='nav-link' to='/spells/5'>
                                     <button className='btn' type='button'>Level 5 Spells</button>
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='nav-link' to='/'>
+                                <NavLink className='nav-link' to='/spells/6'>
                                     <button className='btn' type='button'>Level 6 Spells</button>
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='nav-link' to='/'>
+                                <NavLink className='nav-link' to='/spells/7'>
                                     <button className='btn' type='button'>Level 7 Spells</button>
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='nav-link' to='/'>
+                                <NavLink className='nav-link' to='/spells/8'>
                                     <button className='btn' type='button'>Level 8 Spells</button>
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='nav-link' to='/'>
+                                <NavLink className='nav-link' to='/spells/9'>
                                     <button className='btn' type='button'>Level 9 Spells</button>
                                 </NavLink>
                             </NavItem>
