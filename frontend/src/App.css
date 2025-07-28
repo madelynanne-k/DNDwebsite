@@ -42,15 +42,15 @@
 }
 
 .dashboard .titleBox {
-  background-color: #57757daa; /* Light blue background */
-  color: #333; /* Dark gray text color */
-  width: 100%; /* Set a fixed width */
-  margin: 20px auto; /* Center horizontally */
+  background-color: #57757daa; 
+  color: #333; 
+  width: 100%; 
+  margin: 20px auto; 
   min-height: 150px;
   height: auto;
   padding: 1rem;
   font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   vertical-align: middle;
 }
 
@@ -70,7 +70,30 @@
   color: cornsilk;
 }
 
+.dashboard .topRowSubtitle {
+  font-size: clamp(12px, 1vw, 16px);
+}
 
+@media (max-width: 1200px) {
+  .dashboard .extraSpace {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .dashboard .extraSpace1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .dashboard .extraSpace2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
 
 .dashboard .skill {
   font-weight: bold;
@@ -105,13 +128,14 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.dashboard .skill {
-  font-weight: bold;
+.dashboard .mod {
+  font-weight: normal;
   color: cornsilk;
 }
 
-.dashboard .mod {
-  font-weight: normal;
+.dashboard .trainingSubtitle {
+  font-weight: bold;
+  font-size: clamp(14px, 1vw, 20px);
   color: cornsilk;
 }
 
