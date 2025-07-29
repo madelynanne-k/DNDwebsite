@@ -1,15 +1,15 @@
 import Header from '../Components/Header';
 import { Card, CardBody, CardTitle, Row, Col, CardHeader, CardFooter, CardSubtitle } from 'reactstrap';
 import { useState, useEffect } from 'react';
-import { useUser } from '../Components/UserContext';
+import { useCharacter } from '../Components/CharacterContext';
 
 const Weapons = () => {
 
-  const { user } = useUser();
+  const { character } = useCharacter();
   const [ weapons, setWeapons ] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/characters/${user}/weapons`)
+    fetch(`http://localhost:5000/characters/${character}/weapons`)
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {
@@ -20,7 +20,7 @@ const Weapons = () => {
         }
       })
       .catch((err) => console.error("Error fetching weapons: ", err))
-  }, [user]);
+  }, [character]);
 
   return (
     <div className='weapons'>

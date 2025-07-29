@@ -2,14 +2,14 @@ import Header from '../Components/Header';
 import SpellsNav from '../Components/SpellsNav';
 import { Card, CardBody, CardTitle, Row, Col, CardHeader, Collapse } from 'reactstrap';
 import { useState, useEffect } from 'react';
-import { useUser } from '../Components/UserContext';
+import { useCharacter } from './CharacterContext';
 
 const SpellsLandingBase = ({ level }) => {
 
   const [openIndices, setOpenIndices] = useState(new Set());
   const [spells, setSpells] = useState([]);
 
-  const { user } = useUser();
+  const { character } = useCharacter();
 
   const toggle = (index) => {
     setOpenIndices((prev) => {
@@ -25,7 +25,7 @@ const SpellsLandingBase = ({ level }) => {
 
   /*fetching spells*/
   useEffect(() => {
-    fetch(`http://localhost:5000/characters/${user}/spells/${level}`)
+    fetch(`http://localhost:5000/characters/${character}/spells/${level}`)
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {
@@ -36,7 +36,7 @@ const SpellsLandingBase = ({ level }) => {
         }
       })
       .catch((err) => console.error("Error fetching spells: ", err))
-  }, [user, level]);
+  }, [character, level]);
 
   return (
     <div className='spellsLanding'>

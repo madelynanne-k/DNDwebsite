@@ -2,11 +2,11 @@ import { Navbar, Container, NavItem, Nav, NavbarBrand, NavbarToggler, Collapse }
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from '../imgs/navBarLogo.png';
-import { useUser } from './UserContext';
+import { useCharacter } from './CharacterContext';
 
 const Header = () => {
 
-    const { user } = useUser();
+    const { character } = useCharacter();
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen)
@@ -29,7 +29,7 @@ const Header = () => {
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='nav-link' to={`/dashboard/${user}`}>
+                                <NavLink className='nav-link' to={`/dashboard/${character}`}>
                                     <button className='btn' type='button'>Dashboard</button>
                                 </NavLink>
                             </NavItem>
@@ -64,7 +64,7 @@ const Header = () => {
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='nav-link text-end' to='/'>
+                                <NavLink className='nav-link text-end' to='/login'>
                                     <button type='button' className='btn btn-outline-info px-4'>Logout</button>
                                 </NavLink>
                             </NavItem>

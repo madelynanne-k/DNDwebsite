@@ -2,7 +2,7 @@ import { Row, Col, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from '
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import defaultProfile from '../imgs/navBarLogo.png';
-import { useUser } from '../Components/UserContext';
+import { useCharacter } from '../Components/CharacterContext';
 const Homepage = () => {
 
     const navigate = useNavigate();
@@ -20,11 +20,11 @@ const Homepage = () => {
             .catch((err) => console.error("Error loading characters: ", err));
     }, []);
 
-    const { setUser } = useUser();
+    const { setCharacter } = useCharacter();
 
     const handleSelect = (char) => {
         setSelectedName(char.name);
-        setUser(char.id);
+        setCharacter(char.id);
         navigate(`/dashboard/${char.id}`)
     };
 
@@ -44,7 +44,7 @@ const Homepage = () => {
                             alt={char.name} 
                             className='img shadow' 
                             onClick={() => {
-                                setUser(char.id);
+                                setCharacter(char.id);
                                 navigate(`/dashboard/${char.id}`);
                             }}
                             onError={(e) => {

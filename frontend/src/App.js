@@ -18,12 +18,14 @@ import Level6 from './Pages/Spells/Level6';
 import Level7 from './Pages/Spells/Level7';
 import Level8 from './Pages/Spells/Level8';
 import Level9 from './Pages/Spells/Level9';
+import LoginPage from './Pages/LoginPage';
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path='/' element={<Homepage />} />
+        <Route path='/login' element={<LoginPage />} />
         <Route path='/dashboard/:id' element={<CharacterDashboard />} />
         <Route path='/weapons' element={<Weapons />} />
         <Route path='/spellsLanding' element={<SpellsLandingPage />} />

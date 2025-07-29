@@ -5,15 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
-import { UserProvider } from './Components/UserContext';
+import { CharacterProvider } from './Components/CharacterContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <UserProvider>
+      <CharacterProvider>
         <App />
-      </UserProvider>
+      </CharacterProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
