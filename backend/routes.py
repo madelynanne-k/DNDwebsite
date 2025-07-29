@@ -173,3 +173,20 @@ def get_all_spells(char_id):
         return jsonify(spells)
     else:
         return jsonify({'error': 'spells not found'}), 404
+    
+
+#route to get weapons from character id 
+@routes.route('/characters/<int:char_id>/weapons', methods=['GET'])
+def get_weapons(char_id):
+    conn = get_db_connection()
+    cursor = conn.cursor(dictionary = True)
+
+    cursor.execute("SELECT * FROM weapons WHERE character_id =%s", (char_id,))
+    weapons = cursor.fetchall()
+    cursor.close()
+    conn.close()
+
+    if weapons:
+        return jsonify(weapons)
+    else:
+        return jsonify({'error': 'weapons not found'}), 404

@@ -34,7 +34,7 @@ const AllSpells = () => {
           setSpells([]);
         }
       })
-      .catch((err) => console.error("Error fetching badges: ", err))
+      .catch((err) => console.error("Error fetching spells: ", err))
   }, [user]);
 
   return (

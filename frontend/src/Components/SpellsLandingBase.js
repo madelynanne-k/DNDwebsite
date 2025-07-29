@@ -35,7 +35,7 @@ const SpellsLandingBase = ({ level }) => {
           setSpells([]);
         }
       })
-      .catch((err) => console.error("Error fetching badges: ", err))
+      .catch((err) => console.error("Error fetching spells: ", err))
   }, [user, level]);
 
   return (
