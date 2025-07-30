@@ -21,7 +21,7 @@ def register():
     
 @auth_bp.route('/api/login', methods=['POST'])
 def login():
-    data = request.get_json
+    data = request.get_json()
     db = get_db_connection()
     cursor = db.cursor(dictionary=True)
     cursor.execute("SELECT * FROM users WHERE email = %s", (data['email'],))

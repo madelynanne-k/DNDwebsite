@@ -384,7 +384,7 @@
 
 /*begin login page*/
 .login {
-  background-image: linear-gradient(to bottom right, rgb(233, 108, 7), rgb(247, 231, 5), rgb(212, 14, 14)), url('./imgs/paper-fibers.png');
+  background-image: linear-gradient(to bottom right,  rgb(212, 14, 14), rgb(0, 0, 0), rgb(88, 57, 172)), url('./imgs/paper-fibers.png');
   background-repeat: repeat;
   background-size: auto;
   background-attachment: fixed;
@@ -392,7 +392,33 @@
   color: whitesmoke;
   font-family: 'Lavishly Yours', cursive;
   font-size: 70px;
-  padding: 50px;
   padding-bottom: 50px;
   min-height: 100vh;
+}
+
+.login .title {
+  word-spacing: 25px;
+}
+
+.login .form {
+  font-family: 'Quintessential', serif;
+  font-size: 30px;
+}
+
+.login .submitButton {
+  width: 60%;
+  background-color: #8c7ca3;
+}
+
+.login .createButton {
+  background-color: transparent;
+  color: whitesmoke;
+  font-family: 'Quintessential', serif;
+  font-size: 20px;
+}
+
+.login .createButton:hover {
+  color: #e9080896; 
+  text-shadow: 0 0 5px #6908e9; 
+  cursor: pointer;
 }
